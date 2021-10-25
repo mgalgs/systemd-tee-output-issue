@@ -1,0 +1,13 @@
+[Unit]
+Description=Test teeing under systemd
+
+[Service]
+# same result with either of the following two variants
+ExecStart=/usr/local/bin/tee_test.sh
+# ExecStart=stdbuf -i0 -o0 -e0 /usr/local/bin/tee_test.sh
+
+# same result with or without this guy
+StandardOutput=journal+console
+
+[Install]
+WantedBy=default.target
