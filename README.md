@@ -5,6 +5,8 @@ journal.
 # Setup
 
 ```
+git clone https://github.com/mgalgs/systemd-tee-output-issue.git
+cd systemd-tee-output-issue
 cp tee_test.sh /usr/local/bin
 cp tee_test.service ~/.config/systemd/user/
 systemctl --user daemon-reload
