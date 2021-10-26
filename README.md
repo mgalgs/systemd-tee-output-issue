@@ -48,22 +48,36 @@ and the non-working `Manjaro` config (`diff -r /etc/systemd ~/tmp/debian_systemd
 Viewing with `journalctl --user -x -u tee_test.service`. I only see a subset of the logs.
 
 ```
-Oct 20 09:49:03 grinchel systemd[2678]: Started Test teeing under systemd.
+Oct 26 12:13:53 grinchel systemd[2702]: Started Test teeing under systemd.
 ░░ Subject: A start job for unit UNIT has finished successfully
 ░░ Defined-By: systemd
 ░░ Support: https://forum.manjaro.org/c/support
 ░░
 ░░ A start job for unit UNIT has finished successfully.
 ░░
-░░ The job identifier is 8193.
-Oct 20 09:49:26 grinchel tee_test.sh[399363]: i shall eat 25 slices of pizza
-Oct 20 09:49:40 grinchel tee_test.sh[400047]: i shall eat 39 slices of pizza
-Oct 20 09:49:48 grinchel tee_test.sh[400430]: i shall eat 47 slices of pizza
-Oct 20 09:49:49 grinchel tee_test.sh[400496]: i shall eat 48 slices of pizza
-Oct 20 09:49:50 grinchel tee_test.sh[400529]: i shall eat 49 slices of pizza
-Oct 20 09:49:51 grinchel tee_test.sh[400595]: i shall eat 50 slices of pizza
-Oct 20 09:50:14 grinchel tee_test.sh[401790]: i shall eat 73 slices of pizza
-Oct 20 09:50:27 grinchel systemd[2678]: Stopping Test teeing under systemd...
+░░ The job identifier is 713.
+Oct 26 12:13:54 grinchel tee_test.sh[117352]: i shall eat 2 slices of pie
+Oct 26 12:13:55 grinchel tee_test.sh[117352]: i shall eat 3 slices of pie
+Oct 26 12:13:56 grinchel tee_test.sh[117352]: i shall eat 4 slices of pie
+Oct 26 12:13:57 grinchel tee_test.sh[117352]: i shall eat 5 slices of pie
+Oct 26 12:13:58 grinchel tee_test.sh[117352]: i shall eat 6 slices of pie
+Oct 26 12:13:59 grinchel tee_test.sh[117352]: i shall eat 7 slices of pie
+Oct 26 12:14:00 grinchel tee_test.sh[117352]: i shall eat 8 slices of pie
+Oct 26 12:14:01 grinchel tee_test.sh[117352]: i shall eat 9 slices of pie
+Oct 26 12:14:02 grinchel tee_test.sh[117352]: i shall eat 10 slices of pie
+Oct 26 12:14:03 grinchel tee_test.sh[117352]: i shall eat 11 slices of pie
+Oct 26 12:14:04 grinchel tee_test.sh[117352]: i shall eat 12 slices of pie
+Oct 26 12:14:05 grinchel tee_test.sh[117352]: i shall eat 13 slices of pie
+Oct 26 12:14:06 grinchel tee_test.sh[117352]: i shall eat 14 slices of pie
+Oct 26 12:14:07 grinchel tee_test.sh[117352]: i shall eat 15 slices of pie
+Oct 26 12:14:08 grinchel tee_test.sh[118097]: i shall eat 16 slices of pizza
+Oct 26 12:14:08 grinchel tee_test.sh[117352]: i shall eat 16 slices of pie
+Oct 26 12:14:09 grinchel tee_test.sh[117352]: i shall eat 17 slices of pie
+Oct 26 12:14:10 grinchel tee_test.sh[117352]: i shall eat 18 slices of pie
+Oct 26 12:14:11 grinchel tee_test.sh[117352]: i shall eat 19 slices of pie
+Oct 26 12:14:12 grinchel tee_test.sh[118350]: i shall eat 20 slices of pizza
+Oct 26 12:14:12 grinchel tee_test.sh[117352]: i shall eat 20 slices of pie
+Oct 26 12:14:13 grinchel tee_test.sh[117352]: i shall eat 21 slices of pie
 ```
 
 ### Logs in log file
@@ -71,6 +85,7 @@ Oct 20 09:50:27 grinchel systemd[2678]: Stopping Test teeing under systemd...
 In my log file I see all of the logs.
 
 ```
+
 i like pie
 i shall eat 2 slices of pizza
 i shall eat 3 slices of pizza
@@ -78,8 +93,18 @@ i shall eat 4 slices of pizza
 i shall eat 5 slices of pizza
 i shall eat 6 slices of pizza
 i shall eat 7 slices of pizza
-[...many similar lines snipped -- they ARE all present in sequence as expected...]
-i shall eat 84 slices of pizza
-i shall eat 85 slices of pizza
-i shall eat 86 slices of pizza
+i shall eat 8 slices of pizza
+i shall eat 9 slices of pizza
+i shall eat 10 slices of pizza
+i shall eat 11 slices of pizza
+i shall eat 12 slices of pizza
+i shall eat 13 slices of pizza
+i shall eat 14 slices of pizza
+i shall eat 15 slices of pizza
+i shall eat 16 slices of pizza
+i shall eat 17 slices of pizza
+i shall eat 18 slices of pizza
+i shall eat 19 slices of pizza
+i shall eat 20 slices of pizza
+i shall eat 21 slices of pizza
 ```
