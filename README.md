@@ -2,7 +2,7 @@ Code to reproduce [this issue](https://serverfault.com/q/1081172/66928),
 which is that some of `tee`'s output isn't making it into the system
 journal.
 
-# Setup
+# Repro instructions
 
 ```
 git clone https://github.com/mgalgs/systemd-tee-output-issue.git
