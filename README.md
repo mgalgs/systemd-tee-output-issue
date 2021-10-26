@@ -42,3 +42,44 @@ systemd 247 (247.3-6)
 
 I don't see any glaring difference between the working `Debian 11` config
 and the non-working `Manjaro` config (`diff -r /etc/systemd ~/tmp/debian_systemd`)...
+
+### Logs in system journal
+
+Viewing with `journalctl --user -x -u tee_test.service`. I only see a subset of the logs.
+
+```
+Oct 20 09:49:03 grinchel systemd[2678]: Started Test teeing under systemd.
+░░ Subject: A start job for unit UNIT has finished successfully
+░░ Defined-By: systemd
+░░ Support: https://forum.manjaro.org/c/support
+░░
+░░ A start job for unit UNIT has finished successfully.
+░░
+░░ The job identifier is 8193.
+Oct 20 09:49:26 grinchel tee_test.sh[399363]: i shall eat 25 slices of pizza
+Oct 20 09:49:40 grinchel tee_test.sh[400047]: i shall eat 39 slices of pizza
+Oct 20 09:49:48 grinchel tee_test.sh[400430]: i shall eat 47 slices of pizza
+Oct 20 09:49:49 grinchel tee_test.sh[400496]: i shall eat 48 slices of pizza
+Oct 20 09:49:50 grinchel tee_test.sh[400529]: i shall eat 49 slices of pizza
+Oct 20 09:49:51 grinchel tee_test.sh[400595]: i shall eat 50 slices of pizza
+Oct 20 09:50:14 grinchel tee_test.sh[401790]: i shall eat 73 slices of pizza
+Oct 20 09:50:27 grinchel systemd[2678]: Stopping Test teeing under systemd...
+```
+
+### Logs in log file
+
+In my log file I see all of the logs.
+
+```
+i like pie
+i shall eat 2 slices of pizza
+i shall eat 3 slices of pizza
+i shall eat 4 slices of pizza
+i shall eat 5 slices of pizza
+i shall eat 6 slices of pizza
+i shall eat 7 slices of pizza
+[...many similar lines snipped -- they ARE all present in sequence as expected...]
+i shall eat 84 slices of pizza
+i shall eat 85 slices of pizza
+i shall eat 86 slices of pizza
+```
