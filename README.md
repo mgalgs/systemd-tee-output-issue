@@ -80,6 +80,24 @@ Oct 26 12:14:12 grinchel tee_test.sh[117352]: i shall eat 20 slices of pie
 Oct 26 12:14:13 grinchel tee_test.sh[117352]: i shall eat 21 slices of pie
 ```
 
+Compare this to my Debian 11 system, which doesn't have this problem for
+some reason:
+
+```
+Oct 27 08:51:58 pi-hole-test tee_test.sh[487]: i shall eat 75591 slices of pie
+Oct 27 08:51:59 pi-hole-test tee_test.sh[228195]: i shall eat 75592 slices of pizza
+Oct 27 08:51:59 pi-hole-test tee_test.sh[487]: i shall eat 75592 slices of pie
+Oct 27 08:52:00 pi-hole-test tee_test.sh[228198]: i shall eat 75593 slices of pizza
+Oct 27 08:52:00 pi-hole-test tee_test.sh[487]: i shall eat 75593 slices of pie
+Oct 27 08:52:01 pi-hole-test tee_test.sh[228201]: i shall eat 75594 slices of pizza
+Oct 27 08:52:01 pi-hole-test tee_test.sh[487]: i shall eat 75594 slices of pie
+Oct 27 08:52:02 pi-hole-test tee_test.sh[228206]: i shall eat 75595 slices of pizza
+Oct 27 08:52:02 pi-hole-test tee_test.sh[487]: i shall eat 75595 slices of pie
+Oct 27 08:52:03 pi-hole-test tee_test.sh[228209]: i shall eat 75596 slices of pizza
+Oct 27 08:52:03 pi-hole-test tee_test.sh[487]: i shall eat 75596 slices of pie
+Oct 27 08:52:04 pi-hole-test tee_test.sh[228212]: i shall eat 75597 slices of pizza
+```
+
 ### Logs in log file
 
 In my log file I see all of the logs.
