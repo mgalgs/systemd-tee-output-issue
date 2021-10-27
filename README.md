@@ -2,6 +2,10 @@ Code to reproduce [this issue](https://serverfault.com/q/1081172/66928),
 which is that some of `tee`'s output isn't making it into the system
 journal.
 
+Troubleshooting is underway on the `systemd-devel` mailing list ([archive
+link](https://lists.freedesktop.org/archives/systemd-devel/2021-October/047039.html
+)).
+
 # Repro instructions
 
 ```
